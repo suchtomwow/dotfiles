@@ -36,6 +36,7 @@ FORMULAS=(
 brew install ${FORMULAS[@]}
 brew tap caskroom/cask
 brew cask install ${CASK_FORMULAS[@]}
+brew cleanup
 
 mas install Bear
 mas install Magnet
