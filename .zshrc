@@ -2,14 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/thomas1/.oh-my-zsh
+export ZSH=/Users/`whoami`/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell" # default
 ZSH_THEME="agnoster"
-DEFAULT_USER=thomas1
+DEFAULT_USER=`whoami`
 prompt_context(){}
 
 # Set list of themes to load
@@ -95,4 +95,4 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(rbenv init -)"
-export PATH="/Users/thomas1/.fastlane/bin:/Users/thomas1/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+export PATH="/Users/`whoami`/.fastlane/bin:/Users/`whoami`/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
