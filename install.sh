@@ -36,6 +36,13 @@ CASK_FORMULAS=(
 	slack
 	spotify
 	sublime-text
+	qlcolorcode
+	qlstephen
+	qlmarkdown
+	quicklook-json
+	qlimagesize
+	betterzip
+	provisionql
 )
 
 brew install ${FORMULAS[@]}
