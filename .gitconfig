@@ -28,3 +28,6 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
+	renameLimit = 3621
+[rebase]
+	autosquash = true
