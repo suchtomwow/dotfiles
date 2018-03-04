@@ -845,11 +845,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 588 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 76 618 519 0 0 1920 1177 </string>
+	<string>269 76 606 469 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>330 241 796 473 0 0 1920 1177 </string>
+	<string>176 1602 918 381 -342 1200 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>388 317 570 506 0 0 1920 1177 </string>
+	<string>0 58 1920 1119 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1294,10 +1294,14 @@
 			</dict>
 			<key>Selection Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.19370138645172119</real>
+				<real>0.432098388671875</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15575926005840302</real>
+				<real>0.35166519785943756</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -1525,7 +1529,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-30T02:44:26Z</date>
+	<date>2018-02-12T18:06:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
