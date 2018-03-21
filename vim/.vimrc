@@ -47,7 +47,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/keith/swift.vim.git'
+Plug 'keith/swift.vim.git'
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 nnoremap <F6> :NERDTreeToggle<CR>
