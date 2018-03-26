@@ -4,6 +4,8 @@ echo "Symlinking dotfiles..."
 ln -s dotfiles/.gitconfig ~/.gitconfig
 ln -s dotfiles/.zshrc ~/.zshrc
 ln -s dotfiles/.lldbinit ~/.lldbinit
+ln -s dotfiles/.vimrc ~/.config/nvim/init.vim
+ln -s dotfiles/.vimrc ~/.vimrc
 
 echo "Installing Homebrew..."
 export TRAVIS=1 # this tricks homebrew into installing non-interactively
