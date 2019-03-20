@@ -1,5 +1,3 @@
-cd dotfiles
-
 echo "Symlinking dotfiles..."
 ln -s dotfiles/.gitconfig ~/.gitconfig
 ln -s dotfiles/.zshrc ~/.zshrc
@@ -28,25 +26,28 @@ CASK_FORMULAS=(
 	alfred
 	atext
 	backblaze
+	bettertouchtool
+	betterzip
 	brisk
-	chisel
 	dash
 	dropbox
-	fantastical
+	evernote
 	fastlane
 	google-chrome
 	iterm2
 	macdown
+	notion
+	provisionql
+	qlcolorcode
+	qlimagesize
+	qlmarkdown
+	qlstephen
+	quicklook-json
 	slack
 	spotify
+	https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
 	sublime-text
-	qlcolorcode
-	qlstephen
-	qlmarkdown
-	quicklook-json
-	qlimagesize
-	betterzip
-	provisionql
+	zeplin
 )
 
 brew install ${FORMULAS[@]}
@@ -55,16 +56,23 @@ brew cask install ${CASK_FORMULAS[@]}
 brew cleanup
 
 mas signin --dialog jthomascarey@gmail.com # this launches the MAS dialog
-mas install 1091189122 # Bear
-mas install 441258766 # Magnet
-mas install 1176895641 # Spark
+echo "Installing Bear..."
+mas install 1091189122
+echo "Installing Magnet..."
+mas install 441258766
+echo "Installing Spark..."
+mas install 1176895641
+echo "Installing Fantastical..."
+mas install 975937182
+echo "Installing Xcode (this will take a while)..."
+mas install 497799835
+echo "Installing JSON Helper and Location Helper for BetterTouchTool weather widget..."
+mas install 453114608
+mas install 488536386
 
-echo "Changing shell..."
-# sudo chsh -s /usr/local/bin/zsh
-
-echo "Installing Ruby 2.4.2..."
-rbenv install 2.4.2
-rbenv global 2.4.2
+echo "Installing Ruby 2.5.1..."
+rbenv install 2.5.1
+rbenv global 2.5.1
 
 echo "Installing Powerline-patched fonts..."
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -106,7 +114,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 # There are ways around that, but this is easier.
 echo "Installing oh my zsh"
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-sudo chsh -s /usr/local/bin/zsh
+chsh -s $(which zsh)
 env zsh
 
-cd ..
+echo "Finished running script. Log out and back in for various changes to take effect."

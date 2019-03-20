@@ -95,4 +95,4 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(rbenv init -)"
-export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Users/`whoami`/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Users/`whoami`/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/node@10/bin"
