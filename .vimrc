@@ -7,6 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-session'
+  Plug 'elmcast/elm-vim'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
