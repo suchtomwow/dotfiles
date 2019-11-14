@@ -1,9 +1,5 @@
 echo "Symlinking dotfiles..."
-ln -s dotfiles/.gitconfig ~/.gitconfig
-ln -s dotfiles/.zshrc ~/.zshrc
-ln -s dotfiles/.lldbinit ~/.lldbinit
-ln -s dotfiles/.vimrc ~/.config/nvim/init.vim
-ln -s dotfiles/.vimrc ~/.vimrc
+ln -s dotfiles/.gitconfig ~/.gitconfig ln -s dotfiles/.zshrc ~/.zshrc ln -s dotfiles/.lldbinit ~/.lldbinit ln -s dotfiles/.vimrc ~/.config/nvim/init.vim ln -s dotfiles/.vimrc ~/.vimrc
 
 echo "Installing Homebrew..."
 export TRAVIS=1 # this tricks homebrew into installing non-interactively
@@ -13,41 +9,38 @@ unset TRAVIS
 echo "Installing a bunch of nice stuff..."
 
 FORMULAS=(
-    mas
-    rbenv
-    wget
-    git
-    zsh
-    trash # https://gist.github.com/ashfurrow/3865eed417a5fbe8402708e2c706eea6
+  mas
+  rbenv
+  wget
+  git
+  zsh
+  trash # https://gist.github.com/ashfurrow/3865eed417a5fbe8402708e2c706eea6
 )
 
 CASK_FORMULAS=(
-	1password
-	alfred
-	atext
-	backblaze
-	bettertouchtool
-	betterzip
-	brisk
-	dash
-	dropbox
-	evernote
-	fastlane
-	google-chrome
-	iterm2
-	macdown
-	notion
-	provisionql
-	qlcolorcode
-	qlimagesize
-	qlmarkdown
-	qlstephen
-	quicklook-json
-	slack
-	spotify
-	https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
-	sublime-text
-	zeplin
+  1password
+  alfred
+  atext
+  backblaze
+  bettertouchtool
+  betterzip
+  brisk
+  dash
+  dropbox
+  fastlane
+  google-chrome
+  iterm2
+  notion
+  provisionql
+  qlcolorcode
+  qlimagesize
+  qlmarkdown
+  qlstephen
+  quicklook-json
+  slack
+  spotify
+  https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
+  zeplin
 )
 
 brew install ${FORMULAS[@]}

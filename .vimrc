@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-session'
-  Plug 'elmcast/elm-vim'
+  Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python'
@@ -15,6 +15,7 @@ let g:python_host_prog = '/usr/bin/python'
 set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set number
 set autoread
+let g:session_autoload = 'no'
 
 " Convenience
 inoremap {<CR>  {<CR>}<Esc>O
