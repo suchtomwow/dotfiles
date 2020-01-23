@@ -1,5 +1,9 @@
 echo "Symlinking dotfiles..."
-ln -s dotfiles/.gitconfig ~/.gitconfig ln -s dotfiles/.zshrc ~/.zshrc ln -s dotfiles/.lldbinit ~/.lldbinit ln -s dotfiles/.vimrc ~/.config/nvim/init.vim ln -s dotfiles/.vimrc ~/.vimrc
+ln -s dotfiles/.gitconfig ~/.gitconfig 
+ln -s dotfiles/.zshrc ~/.zshrc 
+ln -s dotfiles/.lldbinit ~/.lldbinit 
+ln -s dotfiles/.vimrc ~/.config/nvim/init.vim 
+ln -s dotfiles/.vimrc ~/.vimrc
 
 echo "Installing Homebrew..."
 export TRAVIS=1 # this tricks homebrew into installing non-interactively
@@ -9,12 +13,13 @@ unset TRAVIS
 echo "Installing a bunch of nice stuff..."
 
 FORMULAS=(
-  mas
-  rbenv
-  wget
   git
-  zsh
+  mas
+  nodenv
+  rbenv
   trash # https://gist.github.com/ashfurrow/3865eed417a5fbe8402708e2c706eea6
+  wget
+  zsh
 )
 
 CASK_FORMULAS=(
@@ -22,6 +27,7 @@ CASK_FORMULAS=(
   alfred
   atext
   backblaze
+  bartender
   bettertouchtool
   betterzip
   brisk
@@ -40,6 +46,7 @@ CASK_FORMULAS=(
   slack
   spotify
   https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
+  visual-studio-code
   zeplin
 )
 
@@ -107,7 +114,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 # There are ways around that, but this is easier.
 echo "Installing oh my zsh"
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-chsh -s $(which zsh)
+ 
 env zsh
 
 echo "Finished running script. Log out and back in for various changes to take effect."
