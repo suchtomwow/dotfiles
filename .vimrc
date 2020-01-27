@@ -8,7 +8,39 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-session'
   Plug 'sheerun/vim-polyglot'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'scrooloose/nerdtree'
+  Plug 'Zaptic/elm-vim'
 call plug#end()
+
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+let g:coc_snippet_next = '<c-j>'
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+nnoremap <silent> gd :call CocAction('jumpDefinition')<Cr>
+nnoremap <silent> gh :call CocAction('doHover')<Cr>
+nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> gy <Plug>(coc-type-definition)
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 
 let g:python_host_prog = '/usr/bin/python'
 
