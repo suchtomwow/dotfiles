@@ -12,6 +12,8 @@
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -1500,13 +1502,15 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.2</string>
-		<string>3.2.9</string>
-		<string>3.3.1</string>
-		<string>3.3.4</string>
-		<string>3.3.0</string>
-		<string>3.3.3</string>
 		<string>3.3.6</string>
+		<string>3.3.4</string>
+		<string>3.3.8</string>
+		<string>3.3.1</string>
+		<string>3.3.3</string>
+		<string>3.3.7</string>
+		<string>3.3.0</string>
+		<string>3.2.9</string>
+		<string>3.3.2</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -1524,7 +1528,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>589740633.22326803</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>13</integer>
+	<integer>23</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2249,28 +2253,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>integrationnvm</string>
-		<string>fontgear</string>
-		<string> use  </string>
-		<string>use </string>
-		<string>running</string>
-		<string>setting</string>
-	</array>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>loan_starecho $</string>
-		<string>loanstar</string>
-		<string>pusherclient: </string>
-		<string>pusherclient </string>
-		<string>actions: </string>
-		<string>action: </string>
-		<string>actio: </string>
-		<string>acti: </string>
-		<string>act: </string>
-		<string>ac: </string>
-	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>574021976.187778</real>
 	<key>NoSyncTipsToNotShow</key>
@@ -2428,7 +2410,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-24T21:20:13Z</date>
+	<date>2020-02-12T16:21:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2438,7 +2420,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -5336,7 +5318,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
