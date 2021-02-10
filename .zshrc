@@ -61,7 +61,7 @@ ZSH_CUSTOM=~/dotfiles/zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +102,12 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Us
 eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+eval "$(nodenv init -)"
+
+# pyenv init
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PATH="$HOME/.tgenv/bin:$PATH"
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
