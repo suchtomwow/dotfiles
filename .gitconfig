@@ -31,3 +31,5 @@
 	renameLimit = 3621
 [rebase]
 	autosquash = true
+[credential]
+	helper = cache
