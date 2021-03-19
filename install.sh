@@ -11,66 +11,24 @@ export TRAVIS=1 # this tricks homebrew into installing non-interactively
 unset TRAVIS
 
 echo "Installing a bunch of nice stuff..."
-
-FORMULAS=(
-  git
-  mas
-  nodenv
-  rbenv
-  trash # https://gist.github.com/ashfurrow/3865eed417a5fbe8402708e2c706eea6
-  wget
-  zsh
-)
-
-CASK_FORMULAS=(
-  1password
-  alfred
-  atext
-  backblaze
-  bartender
-  bettertouchtool
-  betterzip
-  brisk
-  dash
-  dropbox
-  fastlane
-  google-chrome
-  iterm2
-  notion
-  provisionql
-  qlcolorcode
-  qlimagesize
-  qlmarkdown
-  qlstephen
-  quicklook-json
-  slack
-  spotify
-  https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
-  visual-studio-code
-  zeplin
-)
-
-brew install ${FORMULAS[@]}
-brew tap caskroom/cask
-brew cask install ${CASK_FORMULAS[@]}
-brew cleanup
+sh ./casks.sh
 
 mas signin --dialog jthomascarey@gmail.com # this launches the MAS dialog
-echo "Installing Bear..."
+# echo "Installing Bear..."
 mas install 1091189122
-echo "Installing Magnet..."
+# echo "Installing Magnet..."
 mas install 441258766
-echo "Installing Spark..."
+# echo "Installing Spark..."
 mas install 1176895641
 echo "Installing Fantastical..."
 mas install 975937182
-echo "Installing Xcode (this will take a while)..."
+# echo "Installing Xcode (this will take a while)..."
 mas install 497799835
-echo "Installing JSON Helper and Location Helper for BetterTouchTool weather widget..."
+# echo "Installing JSON Helper and Location Helper for BetterTouchTool weather widget..."
 mas install 453114608
 mas install 488536386
 
-echo "Installing Ruby 2.5.1..."
+# echo "Installing Ruby 2.5.1..."
 rbenv install 2.5.1
 rbenv global 2.5.1
 

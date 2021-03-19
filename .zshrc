@@ -63,6 +63,7 @@ ZSH_CUSTOM=~/dotfiles/zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git yarn)
 
+export ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,5 +110,8 @@ eval "$(nodenv init -)"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# Exports
+export EDITOR=vim
 export PATH="$HOME/.tgenv/bin:$PATH"
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
