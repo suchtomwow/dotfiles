@@ -14,21 +14,18 @@ echo "Installing a bunch of nice stuff..."
 sh ./casks.sh
 
 mas signin --dialog jthomascarey@gmail.com # this launches the MAS dialog
-# echo "Installing Bear..."
+echo "Installing Bear..."
 mas install 1091189122
-# echo "Installing Magnet..."
+echo "Installing Magnet..."
 mas install 441258766
-# echo "Installing Spark..."
+echo "Installing Spark..."
 mas install 1176895641
 echo "Installing Fantastical..."
 mas install 975937182
-# echo "Installing Xcode (this will take a while)..."
+echo "Installing Xcode (this will take a while)..."
 mas install 497799835
-# echo "Installing JSON Helper and Location Helper for BetterTouchTool weather widget..."
-mas install 453114608
-mas install 488536386
 
-# echo "Installing Ruby 2.5.1..."
+echo "Installing Ruby 2.5.1..."
 rbenv install 2.5.1
 rbenv global 2.5.1
 
