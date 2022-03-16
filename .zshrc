@@ -131,11 +131,12 @@ _run_yargs_completions()
 compdef _run_yargs_completions run
 ###-end-run-completions-###
 ###-end-web-script-content-###
-eval "$(rbenv init -)"
-eval "$(direnv hook zsh)"
-eval "$(nodenv init -)"
 export PATH=/opt/homebrew/bin:/usr/local/opt/helm@2/bin:/Users/thomas/.tgenv/bin:/Users/thomas/.yarn/bin:/Users/thomas/.config/yarn/global/node_modules/.bin:/usr/local/opt/postgresql@9.6/bin:/Users/thomas/.fastlane/bin:/Users/thomas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/node@10/bin
 export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Users/`whoami`/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/node@10/bin"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.tgenv/bin:$PATH"
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
+eval $(/opt/homebrew/bin/brew shellenv)
+eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
+eval "$(nodenv init -)"
