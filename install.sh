@@ -11,7 +11,7 @@ export TRAVIS=1 # this tricks homebrew into installing non-interactively
 unset TRAVIS
 
 echo "Installing a bunch of nice stuff..."
-sh ./casks.sh
+sh dotfiles/casks.sh
 
 mas signin --dialog jthomascarey@gmail.com # this launches the MAS dialog
 echo "Installing Bear..."

@@ -32,7 +32,7 @@ CASK_FORMULAS=(
   quicklook-json
   slack
   spotify
-  https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
+#  https://raw.githubusercontent.com/caskroom/homebrew-cask/cbd472b8dce75d5aadab817fd6dc22dfcffe44a1/Casks/tower.rb # tower 2
   visual-studio-code
   zeplin
 )

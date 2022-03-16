@@ -98,22 +98,10 @@ export MYVIMRC="$HOME/.vimrc"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(rbenv init -)"
-export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Users/`whoami`/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/node@10/bin"
-eval "$(direnv hook zsh)"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-eval "$(nodenv init -)"
-
 # pyenv init
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-# Exports
-export PATH="$HOME/.tgenv/bin:$PATH"
-export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
 if [ -f ~/.bash_profile ]; then 
     . ~/.bash_profile;
@@ -143,3 +131,11 @@ _run_yargs_completions()
 compdef _run_yargs_completions run
 ###-end-run-completions-###
 ###-end-web-script-content-###
+eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
+eval "$(nodenv init -)"
+export PATH=/opt/homebrew/bin:/usr/local/opt/helm@2/bin:/Users/thomas/.tgenv/bin:/Users/thomas/.yarn/bin:/Users/thomas/.config/yarn/global/node_modules/.bin:/usr/local/opt/postgresql@9.6/bin:/Users/thomas/.fastlane/bin:/Users/thomas/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/node@10/bin
+export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Users/`whoami`/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/node@10/bin"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.tgenv/bin:$PATH"
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
