@@ -4,9 +4,10 @@
 [github]
 	user = suchtomwow
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [core]
 	excludesfile = /Users/thomas/.gitignore_global
 [push]
@@ -33,3 +34,7 @@
 	autosquash = true
 [credential]
 	helper = cache
+[init]
+	defaultBranch = master
+[commit]
+	gpgsign = true

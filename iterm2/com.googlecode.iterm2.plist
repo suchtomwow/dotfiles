@@ -1047,7 +1047,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Yes</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>Yes</string>
 			<key>Disable Printing</key>
@@ -1440,7 +1440,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>~/workspace</string>
+			<string>~</string>
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
@@ -1509,7 +1509,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>

@@ -38,5 +38,7 @@ CASK_FORMULAS=(
 )
 
 brew install ${FORMULAS[@]}
-brew install homebrew/cask/${CASK_FORMULAS[@]}
+brew install ${CASK_FORMULAS[@]} --cask
 brew cleanup
+
+go install github.com/nikitavoloboev/gitupdate@latest

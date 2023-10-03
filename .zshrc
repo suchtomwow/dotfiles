@@ -103,7 +103,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-if [ -f ~/.bash_profile ]; then 
+if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
@@ -136,7 +136,31 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:/Users/`whoami`/.fastlane/bin:/Us
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.tgenv/bin:$PATH"
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval export PATH="/Users/thomas/.nodenv/shims:${PATH}"
+export NODENV_SHELL=zsh
+source '/opt/homebrew/Cellar/nodenv/1.4.1/libexec/../completions/nodenv.zsh'
+command nodenv rehash 2>/dev/null
+nodenv() {
+  local command
+  command="${1:-}"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(nodenv "sh-$command" "$@")";;
+  *)
+    command nodenv "$command" "$@";;
+  esac
+}
