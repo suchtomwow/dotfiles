@@ -1,8 +1,8 @@
 echo "Symlinking dotfiles..."
-ln -s dotfiles/.gitconfig ~/.gitconfig 
-ln -s dotfiles/.zshrc ~/.zshrc 
-ln -s dotfiles/.lldbinit ~/.lldbinit 
-ln -s dotfiles/.vimrc ~/.config/nvim/init.vim 
+ln -s dotfiles/.gitconfig ~/.gitconfig
+ln -s dotfiles/.zshrc ~/.zshrc
+ln -s dotfiles/.lldbinit ~/.lldbinit
+ln -s dotfiles/.vimrc ~/.config/nvim/init.vim
 ln -s dotfiles/.vimrc ~/.vimrc
 
 echo "Installing Homebrew..."
@@ -11,23 +11,28 @@ export TRAVIS=1 # this tricks homebrew into installing non-interactively
 unset TRAVIS
 
 echo "Installing a bunch of nice stuff..."
-sh dotfiles/casks.sh
+sh dotfiles/homebrew.sh
 
 mas signin --dialog jthomascarey@gmail.com # this launches the MAS dialog
 echo "Installing Bear..."
 mas install 1091189122
 echo "Installing Magnet..."
 mas install 441258766
-echo "Installing Spark..."
-mas install 1176895641
-echo "Installing Fantastical..."
-mas install 975937182
-echo "Installing Xcode (this will take a while)..."
-mas install 497799835
+echo "Installing Darkroom..."
+mas install 953286746
+echo "Installing Flighty..."
+mas install 1358823008
+echo "Installing Hand Mirror..."
+mas install 1502839586
+echo "Installing Onigiri Menu Bar Timer..."
+mas install 1639917298
+echo "Installing Shush..."
+mas install 496437906
 
-echo "Installing Ruby 2.5.1..."
-rbenv install 2.5.1
-rbenv global 2.5.1
+echo "Installing Ruby latest..."
+LATEST_RUBY=$(rbenv install -l | grep -v - | tail -1)
+rbenv install $LATEST_RUBY # downloads/installs latest ruby version
+rbenv global $LATEST_RUBY # sets as global ruby instance
 
 echo "Installing Powerline-patched fonts..."
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -41,7 +46,7 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 echo "Misc settings..."
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
-defaults write com.apple.finder AppleShowAllFiles YES 
+defaults write com.apple.finder AppleShowAllFiles YES
 killall Finder /System/Library/CoreServices/Finder.app
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
@@ -69,7 +74,13 @@ defaults write com.apple.finder ShowPathbar -bool true
 # There are ways around that, but this is easier.
 echo "Installing oh my zsh"
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
- 
+
 env zsh
 
+echo "Tasks to perform manually:..."
+echo "* Install Machato (https://untimelyunicorn.gumroad.com/l/machato)"
+echo "* Install latest Xcode via Xcodes.app"
+echo "* Open BetterZip to initialize it"
+echo "* Configure GPG/SSH"
+echo "* Install TinkerTool (https://www.bresink.com/osx/TinkerTool.html)"
 echo "Finished running script. Log out and back in for various changes to take effect."
