@@ -1,8 +1,10 @@
 FORMULAS=(
-  gh # github cli
+  1password-cli
+  gh
   git
   mas
   nodenv
+  pyenv
   rbenv
   trash # https://gist.github.com/ashfurrow/3865eed417a5fbe8402708e2c706eea6
   vagrant

@@ -108,10 +108,6 @@ if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
-if [ -f ~/workspace/pigeon-ios/tools/zsh_functions.sh ]; then
-    source ~/workspace/pigeon-ios/tools/zsh_functions.sh;
-fi
-
 ###-begin-web-script-content-###
 ###-begin-run-completions-###
 #
@@ -143,10 +139,6 @@ eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(nodenv init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval export PATH="/Users/thomas/.nodenv/shims:${PATH}"
 export NODENV_SHELL=zsh
 source '/opt/homebrew/Cellar/nodenv/1.4.1/libexec/../completions/nodenv.zsh'
