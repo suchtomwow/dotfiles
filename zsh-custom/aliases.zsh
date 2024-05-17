@@ -4,4 +4,6 @@ alias rm=trash
 alias vim=nvim
 alias python="$(pyenv which python)"
 alias pip="$(pyenv which pip)"
-
+alias zshrc='$(echo $EDITOR) $HOME/.zshrc && zshsrc'
+alias zshalias='$(echo $EDITOR) $HOME/dotfiles/zsh-custom/aliases.zsh && zshsrc'
+alias zshsrc='source $HOME/.zshrc'
