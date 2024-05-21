@@ -1,3 +1,5 @@
+homeconfig/.vim/sessions/
+homeconfig/.vim/autoload/plug.vim
 homeconfig/bat/themes/
 homeconfig/coc/
 homeconfig/configstore/
