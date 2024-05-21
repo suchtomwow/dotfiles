@@ -36,6 +36,7 @@ rbenv global $LATEST_RUBY # sets as global ruby instance
 
 echo "Installing Powerline-patched fonts..."
 git clone https://github.com/powerline/fonts.git --depth=1
+git clone https://github.com/Twixes/SF-Mono-Powerline.git fonts/SFMono
 zsh fonts/install.sh
 rm -rf fonts
 
