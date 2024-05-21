@@ -1,7 +1,9 @@
-homeconfig/yarn/global/
+homeconfig/bat/themes/
+homeconfig/coc/
+homeconfig/configstore/
 homeconfig/gh/
 homeconfig/iterm2/
 homeconfig/op/
 homeconfig/simple-update-notifier/
-homeconfig/configstore/
+homeconfig/yarn/global/
 **/.DS_Store

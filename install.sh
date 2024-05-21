@@ -1,9 +1,26 @@
-echo "Symlinking dotfiles..."
-ln -s dotfiles/.gitconfig.global ~/.gitconfig
-ln -s dotfiles/.zshrc ~/.zshrc
-ln -s dotfiles/.lldbinit ~/.lldbinit
-ln -s dotfiles/.vimrc ~/.config/nvim/init.vim
-ln -s dotfiles/.vimrc ~/.vimrc
+cho "Symlinking dotfiles..."
+ln -sfn $DOTFILES/.zshrc $HOME/.zshrc
+ln -sfn $DOTFILES/homeconfig $HOME/.config
+ln -sfn $DOTFILES/.gitconfig.global $HOME/.gitconfig.global
+ln -sfn $DOTFILES/.gitconfig $HOME/.gitconfig
+ln -sfn $DOTFILES/.lldbinit $HOME/.lldbinit
+
+echo "Installing bat themes..."
+mkdir -p "$(bat --config-dir)/themes"
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+bat cache --build
+
+echo "Initing vim-plug..."
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
+
+echo "Checking out submodules..."
+git submodule init
+git submodule update
 
 echo "Installing Homebrew..."
 export TRAVIS=1 # this tricks homebrew into installing non-interactively

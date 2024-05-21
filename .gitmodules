@@ -1,0 +1,3 @@
+[submodule "themes/geometry"]
+	path = $CUSTOM_THEME_DIR/geometry
+	url = https://github.com/geometry-zsh/geometry
