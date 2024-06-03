@@ -1,14 +1,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=$HOME/dotfiles
+export SCRIPTS_DIR=$DOTFILES/scripts
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell" # default
 # ZSH_THEME="agnoster-grayscale"
 export CUSTOM_THEME_DIR="$DOTFILES/themes"
 source $CUSTOM_THEME_DIR/geometry/geometry.zsh
+
 DEFAULT_USER=`whoami`
 prompt_context(){}
 
@@ -64,7 +65,6 @@ export ZSH_CUSTOM=$DOTFILES/zsh-custom
 plugins=(
   git
   yarn
-  zsh-autosuggestions
 )
 
 export ZSH_DISABLE_COMPFIX=true
@@ -93,6 +93,13 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # vimrc
 export MYVIMRC="$HOME/.vimrc"
+
+# other settings
+export LESS="-R"
+export HISTCONTROL=ignoreboth
+setopt histappend
+# After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -139,3 +146,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 # End pyenv init
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

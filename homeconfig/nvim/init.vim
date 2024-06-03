@@ -9,6 +9,21 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+function! MakeDirIfNotExist()
+  " Extract the directory part of the file path
+  let dir = expand('%:p:h')
+  
+  " Check if the directory exists
+  if !isdirectory(dir)
+    " Create the directory
+    call mkdir(dir, "p")
+    echo "Created directory: ".dir
+  endif
+endfunction
+
+" Automatically call the function before saving the file
+autocmd BufWritePre * call MakeDirIfNotExist()
+
 call plug#begin('~/.local/share/nvim/plugged')
   Plug 'bumaociyuan/vim-swift'
   Plug 'elixir-editors/vim-elixir'
@@ -19,7 +34,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-session'
   Plug 'sheerun/vim-polyglot'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'scrooloose/nerdtree'
   Plug 'Zaptic/elm-vim'
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
