@@ -2,29 +2,20 @@
   "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
   "schemes" : [
     {
-      "pointer" : {
-        "speed" : 0.084
-      },
       "if" : {
         "device" : {
-          "productID" : "0xd038",
+          "category" : "mouse",
           "vendorID" : "0x3434",
           "productName" : "Keychron 4K Link",
-          "category" : "mouse"
+          "productID" : "0xd038"
         }
       },
-      "scrolling" : {
-        "speed" : {
-          "vertical" : 0.48
-        }
+      "pointer" : {
+        "speed" : 0.079
       },
       "buttons" : {
         "mappings" : [
           {
-            "option" : false,
-            "command" : false,
-            "control" : true,
-            "button" : 3,
             "action" : {
               "keyPress" : [
                 "control",
@@ -32,57 +23,66 @@
                 "tab"
               ]
             },
-            "shift" : false
-          },
-          {
+            "command" : false,
+            "button" : 3,
             "shift" : false,
             "control" : true,
+            "option" : false
+          },
+          {
+            "control" : true,
+            "shift" : false,
+            "button" : 4,
+            "option" : false,
             "action" : {
               "keyPress" : [
                 "control",
                 "tab"
               ]
             },
-            "command" : false,
-            "option" : false,
-            "button" : 4
-          },
-          {
-            "action" : {
-              "mouse.wheel.scrollLeft" : 3
-            },
-            "option" : false,
-            "shift" : false,
-            "scroll" : "right",
-            "control" : false,
             "command" : false
           },
           {
-            "action" : "mouse.wheel.scrollRight",
-            "command" : false,
-            "shift" : false,
             "option" : false,
             "control" : false,
-            "scroll" : "left"
+            "action" : {
+              "mouse.wheel.scrollLeft" : 3
+            },
+            "command" : false,
+            "shift" : false,
+            "scroll" : "right"
+          },
+          {
+            "option" : false,
+            "control" : false,
+            "action" : "mouse.wheel.scrollRight",
+            "scroll" : "left",
+            "command" : false,
+            "shift" : false
           }
         ]
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0.48
+        }
       }
     },
     {
-      "buttons" : {
-        "universalBackForward" : true
-      },
       "if" : {
         "device" : {
-          "productName" : "Keychron 4K Link",
           "vendorID" : "0x3434",
           "category" : "mouse",
-          "productID" : "0xd038"
+          "productID" : "0xd038",
+          "productName" : "Keychron 4K Link"
         },
         "app" : "com.apple.Safari"
       },
       "pointer" : {
         "speed" : 0.2
+      },
+      "buttons" : {
+        "universalBackForward" : true
       }
     }
   ]
