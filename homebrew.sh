@@ -1,5 +1,6 @@
 FORMULAS=(
   1password-cli
+  geometry
   gh
   git
   mas
@@ -31,6 +32,7 @@ CASK_FORMULAS=(
   iina
   iterm2
   latest # update manager for 3rd party apps
+  linearmouse
   middleclick # 3-finger trackpad click mimicks scroll wheel click
   mullvadvpn
   netnewswire

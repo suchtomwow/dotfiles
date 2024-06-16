@@ -7,9 +7,7 @@ export SCRIPTS_DIR=$DOTFILES/scripts
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="agnoster-grayscale"
-export CUSTOM_THEME_DIR="$DOTFILES/themes"
-source $CUSTOM_THEME_DIR/geometry/geometry.zsh
-
+source /opt/homebrew/opt/geometry/share/geometry/geometry.zsh
 DEFAULT_USER=`whoami`
 prompt_context(){}
 
@@ -122,7 +120,7 @@ eval "$(direnv hook zsh)"
 # Begin nodenv config
 eval "$(nodenv init -)"
 export NODENV_SHELL=zsh
-source '/opt/homebrew/Cellar/nodenv/1.4.1/libexec/../completions/nodenv.zsh'
+source '/opt/homebrew/Cellar/nodenv/1.5.0/libexec/../completions/nodenv.zsh'
 command nodenv rehash 2>/dev/null
 nodenv() {
   local command

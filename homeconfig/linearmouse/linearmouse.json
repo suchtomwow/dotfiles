@@ -1,0 +1,89 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "schemes" : [
+    {
+      "pointer" : {
+        "speed" : 0.084
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0xd038",
+          "vendorID" : "0x3434",
+          "productName" : "Keychron 4K Link",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0.48
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "command" : false,
+            "control" : true,
+            "button" : 3,
+            "action" : {
+              "keyPress" : [
+                "control",
+                "shift",
+                "tab"
+              ]
+            },
+            "shift" : false
+          },
+          {
+            "shift" : false,
+            "control" : true,
+            "action" : {
+              "keyPress" : [
+                "control",
+                "tab"
+              ]
+            },
+            "command" : false,
+            "option" : false,
+            "button" : 4
+          },
+          {
+            "action" : {
+              "mouse.wheel.scrollLeft" : 3
+            },
+            "option" : false,
+            "shift" : false,
+            "scroll" : "right",
+            "control" : false,
+            "command" : false
+          },
+          {
+            "action" : "mouse.wheel.scrollRight",
+            "command" : false,
+            "shift" : false,
+            "option" : false,
+            "control" : false,
+            "scroll" : "left"
+          }
+        ]
+      }
+    },
+    {
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Keychron 4K Link",
+          "vendorID" : "0x3434",
+          "category" : "mouse",
+          "productID" : "0xd038"
+        },
+        "app" : "com.apple.Safari"
+      },
+      "pointer" : {
+        "speed" : 0.2
+      }
+    }
+  ]
+}
