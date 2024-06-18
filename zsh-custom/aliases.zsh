@@ -8,6 +8,7 @@ alias cat="bat"
 alias cmdifmodified='command_if_modified'
 alias zshconfig='cmdifmodified $HOME/.zshrc zshsource'
 alias zshalias='cmdifmodified $ZSH_CUSTOM/aliases.zsh zshsource'
+alias gprune='git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d'
 
 zshsource() {
   source $HOME/.zshrc && echo "Reloaded zsh config!"
