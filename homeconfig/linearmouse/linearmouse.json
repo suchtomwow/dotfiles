@@ -1,18 +1,6 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
   "schemes" : [
     {
-      "pointer" : {
-        "speed" : 0.084
-      },
-      "if" : {
-        "device" : {
-          "productID" : "0xd038",
-          "vendorID" : "0x3434",
-          "productName" : "Keychron 4K Link",
-          "category" : "mouse"
-        }
-      },
       "scrolling" : {
         "speed" : {
           "vertical" : 0.48
@@ -22,9 +10,7 @@
         "mappings" : [
           {
             "option" : false,
-            "command" : false,
             "control" : true,
-            "button" : 3,
             "action" : {
               "keyPress" : [
                 "control",
@@ -32,58 +18,122 @@
                 "tab"
               ]
             },
-            "shift" : false
+            "shift" : false,
+            "button" : 3,
+            "command" : false
           },
           {
-            "shift" : false,
-            "control" : true,
             "action" : {
               "keyPress" : [
                 "control",
                 "tab"
               ]
             },
+            "shift" : false,
+            "button" : 4,
             "command" : false,
             "option" : false,
-            "button" : 4
+            "control" : true
           },
           {
+            "shift" : false,
+            "control" : false,
+            "scroll" : "right",
+            "option" : false,
+            "command" : false,
             "action" : {
               "mouse.wheel.scrollLeft" : 3
-            },
-            "option" : false,
-            "shift" : false,
-            "scroll" : "right",
-            "control" : false,
-            "command" : false
+            }
           },
           {
-            "action" : "mouse.wheel.scrollRight",
-            "command" : false,
-            "shift" : false,
-            "option" : false,
             "control" : false,
-            "scroll" : "left"
+            "command" : false,
+            "scroll" : "left",
+            "option" : false,
+            "action" : "mouse.wheel.scrollRight",
+            "shift" : false
           }
-        ]
-      }
-    },
-    {
-      "buttons" : {
+        ],
         "universalBackForward" : true
       },
       "if" : {
         "device" : {
+          "productID" : "0xd038",
           "productName" : "Keychron 4K Link",
           "vendorID" : "0x3434",
-          "category" : "mouse",
-          "productID" : "0xd038"
-        },
-        "app" : "com.apple.Safari"
+          "category" : "mouse"
+        }
       },
       "pointer" : {
-        "speed" : 0.2
+        "speed" : 0.084
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "button" : 3,
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowLeft"
+              ]
+            },
+            "control" : false,
+            "shift" : false,
+            "command" : false
+          },
+          {
+            "command" : false,
+            "control" : false,
+            "button" : 4,
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowRight"
+              ]
+            },
+            "shift" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Keychron 4K Link",
+          "productID" : "0xd038",
+          "vendorID" : "0x3434",
+          "category" : "mouse"
+        },
+        "app" : "com.apple.iCal"
+      }
+    },
+    {
+      "buttons" : {
+        "universalBackForward" : false
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "productID" : "0x0",
+          "category" : "trackpad"
+        },
+        "app" : "com.apple.iCal"
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
 }
