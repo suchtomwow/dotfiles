@@ -1,8 +1,7 @@
 cho "Symlinking dotfiles..."
 ln -sfn $DOTFILES/.zshrc $HOME/.zshrc
 ln -sfn $DOTFILES/homeconfig $HOME/.config
-ln -sfn $DOTFILES/.gitconfig.global $HOME/.gitconfig.global
-ln -sfn $DOTFILES/.gitconfig $HOME/.gitconfig
+ln -sfn $DOTFILES/git/config $HOME/.gitconfig
 ln -sfn $DOTFILES/.lldbinit $HOME/.lldbinit
 
 echo "Installing bat themes..."
