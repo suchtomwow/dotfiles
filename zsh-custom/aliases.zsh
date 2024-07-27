@@ -36,6 +36,7 @@ scp_to_downloads_dir() {
     scp root@applevisionpro:$1 $HOME/Downloads
 }
     
+alias ls='ls -laGFh'
 alias ping='ping -c 4'
 alias rm=trash
 alias vim=nvim

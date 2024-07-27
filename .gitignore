@@ -9,3 +9,4 @@ homeconfig/op/
 homeconfig/simple-update-notifier/
 homeconfig/yarn/global/
 **/.DS_Store
+zsh-post-source/work.zsh

@@ -1,7 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export DOTFILES=$HOME/dotfiles
-export SCRIPTS_DIR=$DOTFILES/scripts
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -112,7 +110,22 @@ if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
-export PATH=$HOME/.nodenv/shims:$HOME/go:/opt/homebrew/bin:/$HOME/.yarn/bin:/$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/postgresql@9.6/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/opt/X11/bin
+export PATH=\
+$HOME/.nodenv/shims:\
+$HOME/go:\
+/opt/homebrew/bin:\
+$HOME/.yarn/bin:\
+$HOME/.config/yarn/global/node_modules/.bin:\
+/usr/local/opt/postgresql@9.6/bin:\
+$HOME/.rbenv/shims:\
+/usr/bin:\
+/usr/local/bin:\
+/bin:\
+/usr/sbin:\
+/sbin:\
+/usr/local/MacGPG2/bin:\
+/opt/X11/bin
+
 eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
@@ -147,3 +160,16 @@ eval "$(pyenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+# Created by `pipx` on 2024-07-18 21:22:29
+export PATH="$PATH:$HOME/.local/bin"
+
+
+export PATH="dingledangle:$PATH"
+
+# Source post-zshrc files (this must be performed as the last step in this file)
+if [ -d $ZSH_POST_SOURCE_DIR ] && compgen -G "$ZSH_POST_SOURCE_DIR/*.zsh" > /dev/null; then
+  for script in $ZSH_POST_SOURCE_DIR/*.zsh; do
+    [ -f "$script" ] && source "$script"
+  done
+fi

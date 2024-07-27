@@ -11,6 +11,7 @@ FORMULAS=(
   vagrant
   wget
   zsh
+  adr-tools
 )
 
 CASK_FORMULAS=(
