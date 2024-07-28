@@ -59,6 +59,8 @@ export ZSH_CUSTOM=$DOTFILES/zsh-custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aliases
+  alias-finder
   git
   yarn
 )
@@ -160,12 +162,15 @@ eval "$(pyenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
 # Created by `pipx` on 2024-07-18 21:22:29
 export PATH="$PATH:$HOME/.local/bin"
 
-
-export PATH="dingledangle:$PATH"
+# begin alias-finder config
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+# end alias-finder config
 
 # Source post-zshrc files (this must be performed as the last step in this file)
 if [ -d $ZSH_POST_SOURCE_DIR ] && compgen -G "$ZSH_POST_SOURCE_DIR/*.zsh" > /dev/null; then

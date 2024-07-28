@@ -12,24 +12,38 @@
 	excludesfile = /Users/thomas/.gitignore_global
 [push]
 	default = simple
-
 [alias]
-        pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-        pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+[merge]
+    tool = bc
+[mergetool]
+	prompt = false
+[mergetool "bc"]
+    cmd = "bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
+    trustexitcode = true
+[mergetool "filemerge"]
+    cmd = opendiff "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
+    trustexitcode = true
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
-[merge]
-	tool = Kaleidoscope
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE" "$BASE" --output="$MERGED"
+    trustexitcode = true
+[diff]
+    tool = bc
+    renameLimit = 3621
+[difftool]
+    prompt = false
+[difftool "bc"]
+	cmd = "bcomp" \"$LOCAL\" \"$REMOTE\"
+[difftool "filemerge"]
+    cmd = opendiff "$LOCAL" "$REMOTE" -merge "$MERGED"
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[mergetool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
-	renameLimit = 3621
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
 [rebase]
 	autosquash = true
 [credential]
