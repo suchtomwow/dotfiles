@@ -1,66 +1,9 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "pointer" : {
         "speed" : 0.084
-      },
-      "if" : {
-        "device" : {
-          "productName" : "Keychron 4K Link",
-          "vendorID" : "0x3434",
-          "productID" : "0xd038",
-          "category" : "mouse"
-        }
-      },
-      "buttons" : {
-        "universalBackForward" : true,
-        "mappings" : [
-          {
-            "button" : 3,
-            "control" : true,
-            "action" : {
-              "keyPress" : [
-                "control",
-                "shift",
-                "tab"
-              ]
-            },
-            "option" : false,
-            "shift" : false,
-            "command" : false
-          },
-          {
-            "command" : false,
-            "option" : false,
-            "shift" : false,
-            "button" : 4,
-            "control" : true,
-            "action" : {
-              "keyPress" : [
-                "control",
-                "tab"
-              ]
-            }
-          },
-          {
-            "scroll" : "right",
-            "command" : false,
-            "control" : false,
-            "shift" : false,
-            "option" : false,
-            "action" : {
-              "mouse.wheel.scrollLeft" : 3
-            }
-          },
-          {
-            "shift" : false,
-            "command" : false,
-            "scroll" : "left",
-            "option" : false,
-            "control" : false,
-            "action" : "mouse.wheel.scrollRight"
-          }
-        ]
       },
       "scrolling" : {
         "reverse" : {
@@ -69,74 +12,131 @@
         "speed" : {
           "vertical" : 0.48
         }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productName" : "Keychron 4K Link",
+          "productID" : "0xd038",
+          "vendorID" : "0x3434"
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "shift" : false,
+            "option" : false,
+            "control" : true,
+            "command" : false,
+            "action" : {
+              "keyPress" : [
+                "control",
+                "shift",
+                "tab"
+              ]
+            },
+            "button" : 3
+          },
+          {
+            "control" : true,
+            "action" : {
+              "keyPress" : [
+                "control",
+                "tab"
+              ]
+            },
+            "command" : false,
+            "button" : 4,
+            "shift" : false,
+            "option" : false
+          },
+          {
+            "scroll" : "right",
+            "control" : false,
+            "shift" : false,
+            "option" : false,
+            "action" : {
+              "mouse.wheel.scrollLeft" : 3
+            },
+            "command" : false
+          },
+          {
+            "option" : false,
+            "action" : "mouse.wheel.scrollRight",
+            "scroll" : "left",
+            "command" : false,
+            "control" : false,
+            "shift" : false
+          }
+        ],
+        "universalBackForward" : true
       }
     },
     {
       "buttons" : {
         "mappings" : [
           {
-            "option" : false,
-            "control" : false,
-            "button" : 3,
-            "shift" : false,
-            "command" : false,
             "action" : {
               "keyPress" : [
                 "command",
                 "arrowLeft"
               ]
-            }
+            },
+            "shift" : false,
+            "button" : 3,
+            "option" : false,
+            "command" : false,
+            "control" : false
           },
           {
             "button" : 4,
-            "control" : false,
-            "option" : false,
-            "shift" : false,
-            "command" : false,
             "action" : {
               "keyPress" : [
                 "command",
                 "arrowRight"
               ]
-            }
+            },
+            "command" : false,
+            "shift" : false,
+            "option" : false,
+            "control" : false
           }
         ]
       },
-      "scrolling" : {
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "acceleration" : {
-          "vertical" : 1
-        },
-        "speed" : {
-          "vertical" : 0
-        }
-      },
       "if" : {
-        "app" : "com.apple.iCal",
         "device" : {
           "productName" : "Keychron 4K Link",
           "vendorID" : "0x3434",
           "productID" : "0xd038",
           "category" : "mouse"
+        },
+        "app" : "com.apple.iCal"
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
         }
       }
     },
     {
       "if" : {
+        "app" : "com.apple.iCal",
         "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
           "category" : "trackpad",
           "vendorID" : "0x0",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
           "productID" : "0x0"
-        },
-        "app" : "com.apple.iCal"
+        }
       },
       "buttons" : {
         "universalBackForward" : false
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }

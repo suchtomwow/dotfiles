@@ -36,7 +36,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -50,6 +50,9 @@ COMPLETION_WAITING_DOTS="true"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+
+# Where are your dotfiles located?
+export DOTFILES=$HOME/dotfiles
 
 # Would you like to use another custom folder than $ZSH/custom?
 export ZSH_CUSTOM=$DOTFILES/zsh-custom

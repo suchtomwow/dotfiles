@@ -8,5 +8,6 @@ homeconfig/iterm2/
 homeconfig/op/
 homeconfig/simple-update-notifier/
 homeconfig/yarn/global/
+iterm2/com.googlecode.iterm2.plist
 **/.DS_Store
 zsh-post-source/work.zsh
