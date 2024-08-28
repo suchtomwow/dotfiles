@@ -18,6 +18,7 @@ CASK_FORMULAS=(
   1password
   alfred
   amethyst # window manager that does different things than magnet
+  azure-data-studio
   backblaze
   bartender
   bettertouchtool
