@@ -27,6 +27,7 @@ CASK_FORMULAS=(
   coteditor # small, fast text editor
   dash # api docs
   discord
+  docker
   fantastical
   gpg-suite
   google-chrome
