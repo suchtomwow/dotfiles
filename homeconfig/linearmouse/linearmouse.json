@@ -1,9 +1,63 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
-      "pointer" : {
-        "speed" : 0.084
+      "if" : {
+        "device" : {
+          "productID" : "0xd038",
+          "vendorID" : "0x3434",
+          "productName" : "Keychron 4K Link",
+          "category" : "mouse"
+        }
+      },
+      "buttons" : {
+        "universalBackForward" : true,
+        "mappings" : [
+          {
+            "command" : false,
+            "shift" : false,
+            "option" : false,
+            "button" : 3,
+            "control" : true,
+            "action" : {
+              "keyPress" : [
+                "control",
+                "shift",
+                "tab"
+              ]
+            }
+          },
+          {
+            "option" : false,
+            "shift" : false,
+            "command" : false,
+            "button" : 4,
+            "control" : true,
+            "action" : {
+              "keyPress" : [
+                "control",
+                "tab"
+              ]
+            }
+          },
+          {
+            "command" : false,
+            "shift" : false,
+            "scroll" : "right",
+            "option" : false,
+            "control" : false,
+            "action" : {
+              "mouse.wheel.scrollLeft" : 3
+            }
+          },
+          {
+            "control" : false,
+            "option" : false,
+            "command" : false,
+            "action" : "mouse.wheel.scrollRight",
+            "scroll" : "left",
+            "shift" : false
+          }
+        ]
       },
       "scrolling" : {
         "reverse" : {
@@ -13,105 +67,11 @@
           "vertical" : 0.48
         }
       },
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productName" : "Keychron 4K Link",
-          "productID" : "0xd038",
-          "vendorID" : "0x3434"
-        }
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "shift" : false,
-            "option" : false,
-            "control" : true,
-            "command" : false,
-            "action" : {
-              "keyPress" : [
-                "control",
-                "shift",
-                "tab"
-              ]
-            },
-            "button" : 3
-          },
-          {
-            "control" : true,
-            "action" : {
-              "keyPress" : [
-                "control",
-                "tab"
-              ]
-            },
-            "command" : false,
-            "button" : 4,
-            "shift" : false,
-            "option" : false
-          },
-          {
-            "scroll" : "right",
-            "control" : false,
-            "shift" : false,
-            "option" : false,
-            "action" : {
-              "mouse.wheel.scrollLeft" : 3
-            },
-            "command" : false
-          },
-          {
-            "option" : false,
-            "action" : "mouse.wheel.scrollRight",
-            "scroll" : "left",
-            "command" : false,
-            "control" : false,
-            "shift" : false
-          }
-        ],
-        "universalBackForward" : true
+      "pointer" : {
+        "speed" : 0.084
       }
     },
     {
-      "buttons" : {
-        "mappings" : [
-          {
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowLeft"
-              ]
-            },
-            "shift" : false,
-            "button" : 3,
-            "option" : false,
-            "command" : false,
-            "control" : false
-          },
-          {
-            "button" : 4,
-            "action" : {
-              "keyPress" : [
-                "command",
-                "arrowRight"
-              ]
-            },
-            "command" : false,
-            "shift" : false,
-            "option" : false,
-            "control" : false
-          }
-        ]
-      },
-      "if" : {
-        "device" : {
-          "productName" : "Keychron 4K Link",
-          "vendorID" : "0x3434",
-          "productID" : "0xd038",
-          "category" : "mouse"
-        },
-        "app" : "com.apple.iCal"
-      },
       "scrolling" : {
         "speed" : {
           "vertical" : 0
@@ -122,21 +82,74 @@
         "acceleration" : {
           "vertical" : 1
         }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "command" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowLeft"
+              ]
+            },
+            "shift" : false,
+            "button" : 3,
+            "option" : false,
+            "control" : false
+          },
+          {
+            "command" : false,
+            "option" : false,
+            "control" : false,
+            "shift" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "arrowRight"
+              ]
+            },
+            "button" : 4
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0xd038",
+          "productName" : "Keychron 4K Link",
+          "vendorID" : "0x3434",
+          "category" : "mouse"
+        },
+        "app" : "com.apple.iCal"
       }
     },
     {
       "if" : {
         "app" : "com.apple.iCal",
         "device" : {
+          "productID" : "0x0",
           "productName" : "Apple Internal Keyboard \/ Trackpad",
           "category" : "trackpad",
-          "vendorID" : "0x0",
-          "productID" : "0x0"
+          "vendorID" : "0x0"
         }
       },
       "buttons" : {
         "universalBackForward" : false
       }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x3434",
+          "productName" : "Keychron M6 4K",
+          "category" : "mouse",
+          "productID" : "0xd046"
+        }
+      },
+      "buttons" : {
+        "universalBackForward" : true
+      }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
