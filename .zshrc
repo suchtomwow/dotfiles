@@ -117,19 +117,20 @@ fi
 
 export PATH=\
 $HOME/.nodenv/shims:\
+$HOME/.yarn/bin:\
+$HOME/.rbenv/shims:\
 $HOME/go:\
 /opt/homebrew/bin:\
-$HOME/.yarn/bin:\
 $HOME/.config/yarn/global/node_modules/.bin:\
 /usr/local/opt/postgresql@9.6/bin:\
-$HOME/.rbenv/shims:\
 /usr/bin:\
 /usr/local/bin:\
 /bin:\
 /usr/sbin:\
 /sbin:\
 /usr/local/MacGPG2/bin:\
-/opt/X11/bin
+/opt/X11/bin:\
+$HOME/dotfiles/scripts
 
 eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(rbenv init -)"
