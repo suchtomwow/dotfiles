@@ -1,0 +1,11 @@
+#!/bin/sh
+
+commit_hash=$(git log $2 --grep="$1" -1 --pretty=format:"%H" --oneline) 
+echo "Found commit: $commit_hash" 
+read -p "Do you want to cherry-pick this commit? [y/N] " confirm 
+
+if [[ $confirm == [yY] ]]; 
+  then git cherry-pick ${commit_hash%% *} --no-commit 
+else 
+  echo "Cherry-pick canceled." 
+fi
