@@ -54,3 +54,7 @@
 	gpgsign = true
 [include]
 	path = ../../.gitconfig
+[color]
+	ui = auto
+[advice]
+	detachedHead = false
