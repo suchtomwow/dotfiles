@@ -3,6 +3,7 @@ FORMULAS=(
   geometry
   gh
   git
+  jordanbaird-ice # menubar manager. for some reason it is not a cask.
   mas
   nodenv
   pyenv
@@ -30,6 +31,7 @@ CASK_FORMULAS=(
   discord
   docker
   fantastical
+  fork
   gpg-suite
   google-chrome
   iina
@@ -43,6 +45,7 @@ CASK_FORMULAS=(
   nvim
   obsidian
   oversight
+  reminders-menubar
   selfcontrol
   signal
   slack
